@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Быстрейшая рука на sigame",
+    "version": "0.0.1",
+    "icons": {
+        "48": "cover48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://sigame.vladimirkhil.com/?gameId=*"],
+            "run_at": "document_end",
+            "js": [
+                "arrive.min.js",
+                "contentScript.js"
+            ],
+            "css": ["style.css"]
+        }
+    ]
+}
